@@ -2,7 +2,7 @@
 
 ## Prep Your Meal!
 
-[My Foodie Project] (https://Foodie.com/)
+[My Foodie Project] ("")
 ```jason
 "meals": [
         {
@@ -45,60 +45,55 @@ Foodie is a website that allows you to search for desired or random recipe and m
 
 ## Wireframes
 
-[My Wireframe] ("https://app.mockplus.com/s/f6i-FAor8mu")
-
-
-
-### MVP/PostMVP
-
-- A working search function
-- API to get information and pictures from
-- Set up HTML
-- Layout of the website view in HTML & CSS
-- Add media query for different devices 
-- Add EventListeners to search submit
+[My Wireframe] ("https://i.imgur.com/jGeHvT4.png")
 
 
 #### MVP 
 
-- Random Search
-- Render data on page 
-- Allow user to choose favorites
+- Create an HTML structure of the website
+- Set background colors 
+- Render data on page
 - Set up image for the selected recipe
+- Create in HTML & CSS buttons for "User" to be able to do: Random Search, Search by cuisine, Search by recipe name
+- Add media query for different devices, so the website looks good at on any User's devices
 
 #### PostMVP  
 
-- Add second API
+- Add second type of image - representing the country of the selected cuisine
 - Use local storage to save user favorites
+- Allow user to choose favorites
 
 ## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 30| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|August 2| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
-|August 3| Pseudocode / actual code | Incomplete
-|August 4| Initial Clickable Model  | Incomplete
-|August 5| MVP | Incomplete
+|August 2 Wireframes / Priority Matrix / Timeframes | Complete 
+|August 3| Core Application Structure (HTML, CSS)Pseudocode| Incomplete
+|August 4| Actual code / Initial Clickable Model  | Incomplete
+|August 5| Check list for MVP / Add post MVP | Incomplete
 |August 6| Presentations | Incomplete
-
-
+ 
 
 ## Priority Matrix
 
-[Priority Matrix] ()
+[Priority Matrix] ("https://i.imgur.com/DThsS84.png")
 
 ## Timeframes
 
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3hrs | 3hrs |
 | Working with API | H | 3hrs| 3hrs | 3hrs |
-| HTML Structure   | H |2hrs|2hrs|2hrs|
-| CSS styling Page | H |3hrs|3hrs|3hrs|
-| Adding Eventlist | H | 3hrs| 3hrs | 3hrs |
-| Total | H | 14hrs| 14hrs | 14hrs |
+| HTML Structure   | H | 2hrs| 2hrs | 2hrs|
+| Adding fonts & background colors | H | 3hrs| 3hrs | 3hrs |
+| Pseudo code | H | 3hrs | 3hrs | 3hrs |
+| Actual code | H | 20hrs| 20hrs| 20hrs|
+| Adding Eventlist | H | 3hrs | 3hrs | 3hrs |
+| Removing previous searcg data| H | 4hrs | 4hrs | 4hrs|
+| CSS styling Page | H | 3hrs | 3hrs | 3hrs|
+| Adding media query | H | 1hrs | 1hrs | 1hrs |
+| Check all MVP's points | H | 1hrs | 1hrs | 1hrs |
+| Total   | H | 40hrs | 40hrs | 40hrs |
 
 ## Code Snippet
 
