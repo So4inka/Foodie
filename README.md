@@ -46,16 +46,16 @@ Foodie is a website that allows you to search for desired or random recipe and m
 ## Wireframes
 
 [My Wireframe] ("https://i.imgur.com/jGeHvT4.png")
-
+![alt text](https://i.imgur.com/jGeHvT4.png "Wireframe")
 
 #### MVP 
 
-- Create an HTML structure of the website
-- Set background colors 
-- Render data on page
-- Set up image for the selected recipe
-- Create in HTML & CSS buttons for "User" to be able to do: Random Search, Search by cuisine, Search by recipe name
-- Add media query for different devices, so the website looks good at on any User's devices
+- Create a website using HTML/ CSS & Javascript
+- Create a beautifully designed webpage
+- Render data on page using 3rd party API
+- User will see food recipe & image
+- User will be able to do a Random Search, Search by cuisine, Search by recipe name
+- Website will maintain responsive design
 
 #### PostMVP  
 
@@ -67,7 +67,7 @@ Foodie is a website that allows you to search for desired or random recipe and m
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|August 2 Wireframes / Priority Matrix / Timeframes | Complete 
+|August 2 |Wireframes / Priority Matrix / Timeframes | Complete 
 |August 3| Core Application Structure (HTML, CSS)Pseudocode| Incomplete
 |August 4| Actual code / Initial Clickable Model  | Incomplete
 |August 5| Check list for MVP / Add post MVP | Incomplete
