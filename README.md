@@ -46,7 +46,7 @@ Foodie is a website that allows you to search for desired or random recipe and m
 ## Wireframes
 
 [My Wireframe] ("https://i.imgur.com/jGeHvT4.png")
-
+![alt text](https://i.imgur.com/jGeHvT4.png "Wireframe")
 
 #### MVP 
 
