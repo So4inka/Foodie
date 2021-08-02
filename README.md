@@ -46,7 +46,7 @@ Foodie is a website that allows you to search for desired or random recipe and m
 ## Wireframes
 
 [My Wireframe] 
-![alt text](https://i.imgur.com/jGeHvT4.png?1 "Wireframe")
+![alt text](https://i.imgur.com/xuophMM.png?1 "Wireframe")
 
 #### MVP 
 
@@ -77,7 +77,7 @@ Foodie is a website that allows you to search for desired or random recipe and m
 ## Priority Matrix
 
 [Priority Matrix] 
-![alt text](https://i.imgur.com/DThsS84.png "Priority Matrix")
+![alt text](https://i.imgur.com/gBMfUSA.png?1 "Priority Matrix")
 
 ## Timeframes
 
