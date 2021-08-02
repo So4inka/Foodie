@@ -45,7 +45,7 @@ Foodie is a website that allows you to search for desired or random recipe and m
 
 ## Wireframes
 
-[My Wireframe] ("https://app.mockplus.com/rp/editor/cYjH5q_gLL6/daYvO-ZswEfV")
+[My Wireframe] ("https://app.mockplus.com/s/f6i-FAor8mu")
 
 
 
