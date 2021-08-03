@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  border: 3px solid rgb(16, 16, 17);
+}
+img {
+  display: inline-flex;
+  width: 500px;
+  height: fit-content;
+}
+
+
+  body {
+    display: block;
+    margin: 8px;
+    display: lex;
+    background-position: center center;
+    background-image: flex-box;
+    background-repeat: no-repeat; background-size: cover;
+}
