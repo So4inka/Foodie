@@ -4,7 +4,8 @@
 // a) Search by country cuisine ()
 
 function fetchData(country) {
-
+// write code here
+  removeCountry()
   const url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`
   axios.get(url)
     .then((res) => {
@@ -17,7 +18,7 @@ function fetchData(country) {
     console.error(error)
   })
 }
-fetchData('canadian')
+// fetchData('canadian')
 
 function showCountryData(data) {
   // console.log(data.strMealThumb)
@@ -29,9 +30,27 @@ function showCountryData(data) {
   <h1>${data.strMeal}</h1>
   <img src="${data.strMealThumb}">
   `
+  document.querySelector('#country-data').insertAdjacentHTML('beforeend', countryElements)
+}
   // console.log(countryElements)
-// Step 4. Append country Data
- document.querySelector('#country-data').insertAdjacentHTML('beforeend', countryElements)
+// Step 4. Dynamicly search county using HHTNL form with eventHadler
+const form = document.querySelector('#country-form')
+//  console.log(form)
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const textInput = document.querySelector
+    ('#country-search')
+  console.log(textInput.value)
+  fetchData(textInput.value)
+})
+// Step 5. Remove previous country data
+// write  code here
+// call that function
+function removeCountry() {
+  const removeElement = document.querySelector('#country-data')
+  while (removeElement.lastChild) {
+    removeElement.removeChild(removeElement.lastChild)
+  }
 }
 
 
