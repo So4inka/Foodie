@@ -3,26 +3,48 @@
 //from the API https://themealdb.com/
 // a) Search by country cuisine ()
 // b) Search for actual recipe instruction, youtube video
-
-function fetchData(country, mealId) {
-// write code here
-  removeCountry()
-  const url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`
-  const url2 = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
-  axios.get(url, url2)
-    .then((res) => {
-      // console.log(res.data.meals[0])
-      const countryData = res.data.meals[0]
-      const mealIdData = res.data.meals[0]
-      showCountryData(countryData, mealIdData)
-      return countryData
-      return mealIdData
-    })
-    .catch((error) => {
+const fetchData = async (country) => {
+  try {
+    const mealSearch = document.querySelector("#country-search").value
+    const data = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
+    console.log(data.data.meals[0])
+    const mealId = data.data.meals[0].idMeal
+    console.log(mealId)
+    const meal = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
+    console.log(meal)
+    const mealRecipe = meal.data.meals[0].strInstructions
+    console.log(mealRecipe)
+  }
+  catch (error) {
     console.error(error)
-  })
+  }
 }
+fetchData("canadian")
+
+
+
+
+// function fetchData(country) {
+// // write code here
+//   removeCountry()
+//   const url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`
+//   // const url2 = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
+//   axios.get(url)
+//     .then((res) => {
+//       console.log(res.data.meals[0])
+//       const countryData = res.data.meals[0]
+//       // const mealIdData = res.data.meals[0]
+//       // showCountryData(countryData, mealIdData)
+//       return countryData
+//       // return mealIdData
+//     })
+//     .catch((error) => {
+//     console.error(error)
+//   })
+// }
 // fetchData('canadian')
+
+
 
 function showCountryData(data) {
   // console.log(data.strMealThumb)
@@ -30,11 +52,11 @@ function showCountryData(data) {
 // strMeal
 // strMealThumb
 // idMeal
-//Step 2. Create dynamic HTML for SEARCH BY AREA 
+// Step 2. Create dynamic HTML for SEARCH BY AREA 
   let countryElements = `
   <h1>${data.strMeal}</h1>
   <img src="${data.strMealThumb}">
-  <h3>${data.idMeal}</h3>
+  // <h3>${data.idMeal}</h3>
   `
   document.querySelector('#country-data').insertAdjacentHTML('beforeend', countryElements)
 }
@@ -63,28 +85,75 @@ function removeCountry() {
    
 
 
+// Do Steps from 1-6 for SEARCH BY RANDOM "www.themealdb.com/api/json/v1/1/random.php";
+
+// function fetchRandom(random) {
+//   // write code here
+//     removeRandom()
+//     const url = `https://www.themealdb.com/api/json/v1/1/${random}.php`
+//     axios.get(url)
+//       .then((res) => {
+//         console.log(res.data.meals[0])
+//         const randomData = res.data.meals[0]
+        
+//         return randomData
+        
+//       })
+//       .catch((error) => {
+//       console.error(error)
+//     })
+//   }
+//   fetchRandom('random')
+// // Steps 2-6
+
+// function showRandomData(data) {
+  
+// strMeal
+// strMealThumb
+// strCategory
+// strArea
+// strInstructions:
+// strYoutube:
+// strIngredient:
+// strMeasure: 
+// Step 2. Create dynamic HTML for SEARCH RANDOM 
+//   let randomElements = `
+//   <h1>${data.strMeal}</h1>
+//   <img src="${data.strMealThumb}">
+//   <h2>${data.strInstructions}</h2>
+//   <h3>${data.strIngredient}</h3>
+//   <h3>${data.strMeasure}</h3>
+//   <p>${data.strYoutube}</p>
+//   `
+//   document.querySelector('#random-data').insertAdjacentHTML('beforeend', randomElements)
+// }
+//   // console.log(randomElements)
+// // Step 4. Dynamicly search county using HTML form with eventHadler
+// const form = document.querySelector('#random-form')
+// //  console.log(form)
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault()
+//   const textInput = document.querySelector
+//     ('#random-search')
+//   console.log(textInput.value)
+//   fetchData(textInput.value)
+// })
+// Step 5. Remove previous random data
+// write  code here
+// call that function
+function removeRandom() {
+  const removeElement = document.querySelector('#random-data')
+  while (removeElement.lastChild) {
+    removeElement.removeChild(removeElement.lastChild)
+  }
+}
+
+
+   
 
 
 
 
-// Step 2. // Make a request and (convert response to dropdown menu) render data on the page... 
-// for SEARCH BY AREA "http://www.themealdb.com/api/json/v1/1/list.php?a=list"
-// WIP
-// for SEARCH BY RANDOM "www.themealdb.com/api/json/v1/1/random.php";
-//http://www.themealdb.com/api/json/v1/1/randomselection.php
-// const get_meal_btn = document.getElementById('get_meal');
-// ONE OF THE OPTIONS:
-// const meal_container = document.getElementById('meal');
-//get_meal_btn.addEventListener('click', () => {
-//	fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-//  .then(res => res.json())
-// .then(res => {
-//     createMeal(res.meals[0]);
-//   })
-//   .catch(e => {
-//     console.warn(e);
-//   });
-// });
 
 
 // for SEARCH BY RECIPE NAME
