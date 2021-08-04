@@ -2,17 +2,21 @@
 //Step 1: Fetch Country data using .then() 
 //from the API https://themealdb.com/
 // a) Search by country cuisine ()
+// b) Search for actual recipe instruction, youtube video
 
-function fetchData(country) {
+function fetchData(country, mealId) {
 // write code here
   removeCountry()
   const url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`
-  axios.get(url)
+  const url2 = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
+  axios.get(url, url2)
     .then((res) => {
       // console.log(res.data.meals[0])
       const countryData = res.data.meals[0]
-      showCountryData(countryData)
-      return countryData 
+      const mealIdData = res.data.meals[0]
+      showCountryData(countryData, mealIdData)
+      return countryData
+      return mealIdData
     })
     .catch((error) => {
     console.error(error)
@@ -23,12 +27,14 @@ function fetchData(country) {
 function showCountryData(data) {
   // console.log(data.strMealThumb)
   // Step 2.
-//strMeal
-//strMealThumb
+// strMeal
+// strMealThumb
+// idMeal
 //Step 2. Create dynamic HTML for SEARCH BY AREA 
   let countryElements = `
   <h1>${data.strMeal}</h1>
   <img src="${data.strMealThumb}">
+  <h3>${data.idMeal}</h3>
   `
   document.querySelector('#country-data').insertAdjacentHTML('beforeend', countryElements)
 }
@@ -63,8 +69,24 @@ function removeCountry() {
 
 // Step 2. // Make a request and (convert response to dropdown menu) render data on the page... 
 // for SEARCH BY AREA "http://www.themealdb.com/api/json/v1/1/list.php?a=list"
+// WIP
 // for SEARCH BY RANDOM "www.themealdb.com/api/json/v1/1/random.php";
 //http://www.themealdb.com/api/json/v1/1/randomselection.php
+// const get_meal_btn = document.getElementById('get_meal');
+// ONE OF THE OPTIONS:
+// const meal_container = document.getElementById('meal');
+//get_meal_btn.addEventListener('click', () => {
+//	fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+//  .then(res => res.json())
+// .then(res => {
+//     createMeal(res.meals[0]);
+//   })
+//   .catch(e => {
+//     console.warn(e);
+//   });
+// });
+
+
 // for SEARCH BY RECIPE NAME
 //// Step 3: Create dynamic HTML
 // create img for each search result...
