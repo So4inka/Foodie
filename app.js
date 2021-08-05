@@ -3,17 +3,23 @@
 //from the API https://themealdb.com/
 // a) Search by country cuisine ()
 // b) Search for actual recipe instruction, youtube video
+// removeCountry()
 const fetchData = async (country) => {
   try {
-    const mealSearch = document.querySelector("#country-search").value
-    const data = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
-    console.log(data.data.meals[0])
-    const mealId = data.data.meals[0].idMeal
-    console.log(mealId)
+    
+    const url = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
+    // console.log(data.data.meals[0])
+    const mealId = url.data.meals[0].idMeal
+    // console.log(mealId)
+    
     const meal = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
-    console.log(meal)
-    const mealRecipe = meal.data.meals[0].strInstructions
-    console.log(mealRecipe)
+    // console.log(meal)
+    const mealRecipe = meal.data.meals[0]
+    // console.log(mealRecipe)
+    
+    // const mealRecipe = meal.data.meals[0].strInstructions
+    // console.log(mealRecipe)
+    showMealRecipe(mealRecipe) 
   }
   catch (error) {
     console.error(error)
@@ -21,9 +27,24 @@ const fetchData = async (country) => {
 }
 fetchData("canadian")
 
+// Step 2. Create dynamic HTML for SEARCH BY AREA
+// Step 3. Dynamicly search county using HHTNL form with eventHadler 
+// Step 4. Append data
 
-
-
+function showMealRecipe(meals) {
+  // console.log(meals)
+// strMeal
+// strMealThumb
+// idMeal etc...
+  let mealElements = `
+  <h1>${meals.strMeal}</h1>
+  <img src="${meals.strMealThumb}">
+  <h2>Instructions:</h2>
+  <h4>${meals.strInstructions}</h4>  
+  <a href="${meals.strYoutube}">Watch it on Youtube!</a> 
+  `
+document.querySelector('#recipe-data').insertAdjacentHTML('beforeend', mealElements)
+ }
 // function fetchData(country) {
 // // write code here
 //   removeCountry()
@@ -34,7 +55,7 @@ fetchData("canadian")
 //       console.log(res.data.meals[0])
 //       const countryData = res.data.meals[0]
 //       // const mealIdData = res.data.meals[0]
-//       // showCountryData(countryData, mealIdData)
+//       // showCountryData(countryData)
 //       return countryData
 //       // return mealIdData
 //     })
@@ -46,40 +67,30 @@ fetchData("canadian")
 
 
 
-function showCountryData(data) {
-  // console.log(data.strMealThumb)
-  // Step 2.
-// strMeal
-// strMealThumb
-// idMeal
-// Step 2. Create dynamic HTML for SEARCH BY AREA 
-  let countryElements = `
-  <h1>${data.strMeal}</h1>
-  <img src="${data.strMealThumb}">
-  // <h3>${data.idMeal}</h3>
-  `
-  document.querySelector('#country-data').insertAdjacentHTML('beforeend', countryElements)
-}
+  
+
+// 
+//   
   // console.log(countryElements)
 // Step 4. Dynamicly search county using HHTNL form with eventHadler
-const form = document.querySelector('#country-form')
-//  console.log(form)
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
-  const textInput = document.querySelector
-    ('#country-search')
-  console.log(textInput.value)
-  fetchData(textInput.value)
-})
+// const form = document.querySelector('#country-form')
+// //  console.log(form)
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault()
+//   const textInput = document.querySelector
+//     ('#country-search')
+//   console.log(textInput.value)
+//   fetchData(textInput.value)
+// })
 // Step 5. Remove previous country data
 // write  code here
 // call that function
-function removeCountry() {
-  const removeElement = document.querySelector('#country-data')
-  while (removeElement.lastChild) {
-    removeElement.removeChild(removeElement.lastChild)
-  }
-}
+// function removeCountry() {
+//   const removeElement = document.querySelector('#country-data')
+//   while (removeElement.lastChild) {
+//     removeElement.removeChild(removeElement.lastChild)
+//   }
+// }
 
 
    
@@ -141,12 +152,13 @@ function removeCountry() {
 // Step 5. Remove previous random data
 // write  code here
 // call that function
-function removeRandom() {
-  const removeElement = document.querySelector('#random-data')
-  while (removeElement.lastChild) {
-    removeElement.removeChild(removeElement.lastChild)
-  }
-}
+
+// function removeRandom() {
+//   const removeElement = document.querySelector('#random-data')
+//   while (removeElement.lastChild) {
+//     removeElement.removeChild(removeElement.lastChild)
+//   }
+// }
 
 
    
