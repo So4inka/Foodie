@@ -2,7 +2,7 @@
 
 ## Prep Your Meal!
 
-[My Foodie Project] ("")
+[My Gourmie Project] ("")
 ```jason
 "meals": [
         {
