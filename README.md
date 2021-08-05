@@ -95,9 +95,10 @@ Foodie is a website that allows you to search for desired or random recipe and m
 | Adding Eventlist | H | 3hrs | 3hrs | 3hrs |
 | Removing previous searcg data| H | 3hrs | 3hrs | 3hrs|
 | CSS styling Page | H | 3hrs | 3hrs | 3hrs|
-| Adding media query | H | 1hrs | 1hrs | 1hrs |
+| Adding media query | H | 1hrs | 2hrs | 2hrs |
 | Check MVP/ Fixing| H | 3hrs | 3hrs | 3hrs |
-| Total   | H | 33hrs | 33hrs | 33hrs |
+| Post MVP| H | 3hrs | 3hrs | 3hrs |
+| Total   | H | 36hrs | 37hrs | 37hrs |
 
 ## Code Snippet
 
