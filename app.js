@@ -3,10 +3,10 @@
 //from the API https://themealdb.com/
 // a) Search by country cuisine ()
 // b) Search for actual recipe instruction, youtube video
-// removeCountry()
+
 const fetchData = async (country) => {
-  try {
-    
+  removeRecipe()
+  try {  
     const url = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
     // console.log(data.data.meals[0])
     const mealId = url.data.meals[0].idMeal
@@ -25,7 +25,7 @@ const fetchData = async (country) => {
     console.error(error)
   }
 }
-fetchData("canadian")
+// fetchData("canadian")
 
 // Step 2. Create dynamic HTML for SEARCH BY AREA
 // Step 3. Dynamicly search county using HHTNL form with eventHadler 
@@ -44,7 +44,25 @@ function showMealRecipe(meals) {
   <a href="${meals.strYoutube}">Watch it on Youtube!</a> 
   `
 document.querySelector('#recipe-data').insertAdjacentHTML('beforeend', mealElements)
- }
+}
+const form = document.querySelector('#recipe-form')
+//  console.log(form)
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const textInput = document.querySelector
+    ('#recipe-search')
+  console.log(textInput.value)
+  fetchData(textInput.value)
+}) 
+// Step 5. Remove previous country data
+// write  code here & call that function after
+function removeRecipe() {
+  const removeElement = document.querySelector('#recipe-data')
+  while (removeElement.lastChild) {
+    removeElement.removeChild(removeElement.lastChild)
+  }
+}
+
 // function fetchData(country) {
 // // write code here
 //   removeCountry()
