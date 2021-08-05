@@ -1,4 +1,6 @@
-
+header {
+    flex: 0 150px;
+}
 
 body {
   text-align: center;
@@ -30,11 +32,12 @@ img {
 
 
 body {
-  display: block;
+  display: flexbox;
   margin: 8px;
   display: lex;
   background-position: center center;
   background-image: flex-box;
+  background: url(https://i.imgur.com/BKiv6jo.png?1)
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -6,31 +6,19 @@
 
 const fetchData = async (country) => {
   removeRecipe()
-  try {  
+  try {
     const url = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
-    // console.log(data.data.meals[0])
     const mealId = url.data.meals[0].idMeal
-    // console.log(mealId)
-    
+   
     const meal = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
-    // console.log(meal)
     const mealRecipe = meal.data.meals[0]
-    // console.log(mealRecipe)
-    // function allMeals(mealRecipe) {
-    //   mealRecipe.forEach((meals) => {
-  
-    //   })
-    // }
-    // const mealRecipe = meal.data.meals[0].strInstructions
-    // console.log(mealRecipe)
-    showMealRecipe(mealRecipe) 
+    
+    showMealRecipe(mealRecipe)
   }
   catch (error) {
     console.error(error)
   }
 }
-
-// Trying Traverse through the object...
 
 
 
@@ -39,28 +27,29 @@ const fetchData = async (country) => {
 // Step 4. Append data
 
 function showMealRecipe(meals) {
-  // console.log(meals)
-// strMeal
-// strMealThumb
-// idMeal etc...
-  let mealElements = `
+  // strMeal
+  // strMealThumb
+  // idMeal etc...
+  
+    let mealElements = `
   <h1>${meals.strMeal}</h1>
   <img src="${meals.strMealThumb}">
   <h2>Instructions:</h2>
   <h4>${meals.strInstructions}</h4>  
   <a href="${meals.strYoutube}">Watch it on Youtube!</a> 
   `
-document.querySelector('#recipe-data').insertAdjacentHTML('beforeend', mealElements)
-}
-const form = document.querySelector('#recipe-form')
-//  console.log(form)
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
-  const textInput = document.querySelector
-    ('#recipe-search')
-  console.log(textInput.value)
-  fetchData(textInput.value)
-}) 
+    document.querySelector('#recipe-data').insertAdjacentHTML('beforeend', mealElements)
+  }
+  const form = document.querySelector('#recipe-form')
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const textInput = document.querySelector
+      ('#recipe-search')
+    console.log(textInput.value)
+    fetchData(textInput.value)
+  })
+
 // Step 5. Remove previous country data
 // write  code here & call that function after
 function removeRecipe() {
@@ -151,6 +140,4 @@ function removeRecipe() {
  
 // Search by county cuisine - total 32 counties & each country meals...
 // Do the same steps for search random recipes
-// Do the same steps for search by name of the recipe
-
-
+// Do the same steps for search by name of the 
