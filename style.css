@@ -1,19 +1,40 @@
+
+
 body {
   text-align: center;
   border: 3px solid rgb(16, 16, 17);
 }
 img {
   display: inline-flex;
-  width: 500px;
+  width: 600px;
   height: fit-content;
+  max-width: 100%;
+  padding: 3px;
+  border: 3px solid rgb(112, 23, 24);
 }
-
-
+@media (max-width: 500px) {
   body {
-    display: block;
-    margin: 8px;
-    display: lex;
-    background-position: center center;
-    background-image: flex-box;
-    background-repeat: no-repeat; background-size: cover;
+    background-image: url(body.png);
+  }
+  .example {
+    background-image: url(large.png);
+  }
+  @media only screen and (max-width: 660px) {
+    html {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+
+
+body {
+  display: block;
+  margin: 8px;
+  display: lex;
+  background-position: center center;
+  background-image: flex-box;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
