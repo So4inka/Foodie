@@ -87,16 +87,17 @@ Foodie is a website that allows you to search for desired or random recipe and m
 | Working with API | H | 3hrs| 3hrs | 3hrs |
 | HTML Structure   | H | 2hrs| 2hrs | 2hrs|
 | Adding fonts & background colors | H | 3hrs| 3hrs | 3hrs |
-| Pseudo code | H | 3hrs | 3hrs | 3hrs |
+| Pseudo code | H | 2hrs | 2hrs | 2hrs |
 | Actual code | H | 3hrs| 3hrs| 3hrs|
+| Adding form| H | 2hrs| 2hrs| 2hrs|
 | Async call for mealId & associated country| H | 3hrs| 3hrs| 3hrs|
 | Appending data to the page | H | 2hrs| 3hrs| 3hrs|
 | Adding Eventlist | H | 3hrs | 3hrs | 3hrs |
 | Removing previous searcg data| H | 3hrs | 3hrs | 3hrs|
 | CSS styling Page | H | 3hrs | 3hrs | 3hrs|
 | Adding media query | H | 1hrs | 1hrs | 1hrs |
-| Check all MVP's points | H | 1hrs | 1hrs | 1hrs |
-| Total   | H | 30hrs | 31hrs | 31hrs |
+| Check MVP/ Fixing| H | 3hrs | 3hrs | 3hrs |
+| Total   | H | 33hrs | 33hrs | 33hrs |
 
 ## Code Snippet
 
