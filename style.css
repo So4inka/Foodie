@@ -85,5 +85,10 @@ body {
     border: 3px solid rgb(16, 16, 17);
     background-image: flex-box;
     background-repeat: no-repeat;
+    background: -webkit-linear-gradient(
+      bottom,
+      rgb(205, 137, 78),
+      rgba(199, 175, 150, 0.4)
+    );
   }
 }
