@@ -2,7 +2,7 @@
 
 ## Prep Your Meal!
 
-[My Foodie Project] ("")
+[My Gourmie Project] ("")
 ```jason
 "meals": [
         {
@@ -54,23 +54,23 @@ Foodie is a website that allows you to search for desired or random recipe and m
 - Create a beautifully designed webpage
 - Render data on page using 3rd party API
 - User will see food recipe & image
-- User will be able to do a Random Search, Search by cuisine, Search by recipe name
+- User will be able to do Search by cuisine
 - Website will maintain responsive design
 
 #### PostMVP  
 
 - Add second type of image - representing the country of the selected cuisine
 - Use local storage to save user favorites
-- Allow user to choose favorites
+- Add Random Search
 
 ## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
 |August 2 |Wireframes / Priority Matrix / Timeframes | Complete 
-|August 3| Core Application Structure (HTML, CSS)Pseudocode| Incomplete
-|August 4| Actual code / Initial Clickable Model  | Incomplete
-|August 5| Check list for MVP / Add post MVP | Incomplete
+|August 3| Core Application Structure (HTML, CSS)Pseudocode| Complete
+|August 4| Actual code / Initial Clickable Model  | Complete
+|August 5| Check list for MVP / Add post MVP | Partially complete
 |August 6| Presentations | Incomplete
  
 
@@ -87,14 +87,19 @@ Foodie is a website that allows you to search for desired or random recipe and m
 | Working with API | H | 3hrs| 3hrs | 3hrs |
 | HTML Structure   | H | 2hrs| 2hrs | 2hrs|
 | Adding fonts & background colors | H | 3hrs| 3hrs | 3hrs |
-| Pseudo code | H | 3hrs | 3hrs | 3hrs |
-| Actual code | H | 20hrs| 20hrs| 20hrs|
+| Pseudo code | H | 2hrs | 2hrs | 2hrs |
+| Actual code | H | 3hrs| 3hrs| 3hrs|
+| Adding form| H | 2hrs| 2hrs| 2hrs|
+| Async call for mealId & associated country| H | 3hrs| 3hrs| 3hrs|
+| Appending data to the page | H | 2hrs| 3hrs| 3hrs|
 | Adding Eventlist | H | 3hrs | 3hrs | 3hrs |
-| Removing previous searcg data| H | 4hrs | 4hrs | 4hrs|
+| Removing previous searcg data| H | 3hrs | 3hrs | 3hrs|
 | CSS styling Page | H | 3hrs | 3hrs | 3hrs|
-| Adding media query | H | 1hrs | 1hrs | 1hrs |
-| Check all MVP's points | H | 1hrs | 1hrs | 1hrs |
-| Total   | H | 40hrs | 40hrs | 40hrs |
+| Adding media query | H | 1hrs | 2hrs | 2hrs |
+| Adding flexbox | H | 1hrs | 1hrs | 1hrs |
+| Check MVP/ Fixing| H | 3hrs | 3hrs | 3hrs |
+| Post MVP| H | 3hrs | 3hrs | 3hrs |
+| Total   | H | 37hrs | 38hrs | 38hrs |
 
 ## Code Snippet
 
