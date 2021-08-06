@@ -3,27 +3,19 @@ div .header {
   padding-top: 50px;
 	font-size: 20px;
 	text-align: center;
-  background-color: rgb(15, 157, 79);
+  background-color: rgb(238, 227, 180);
 }
 h1 {
-  font-size: 2rem;
+  font-size: 76px;
   padding: 2rem;
+  font-family: 'Kaushan Script', cursive;
 }
-body {
-  text-align: center;
-  border: 3px solid rgb(16, 16, 17);
-}
-/* div {
-  background-image: url('https://i.imgur.com/zwlpfg5.png')
-} */
-
-
 
 img {
   display: inline-flex;
-  width: max-content;
+  width: 600px;
   height: 350px;
-  max-width: 100%;
+  max-width: 600px;
   padding: 5px;
   border: 3px solid rgb(112, 23, 24);
   
@@ -32,9 +24,7 @@ img {
   body {
     background-image: url(body.png);
   }
-  .example {
-    background-image: url(large.png);
-  }
+  
   @media only screen and (max-width: 660px) {
     html {
       font-size: 14px;
@@ -45,9 +35,11 @@ body {
   display: flexbox;
   margin: 8px;
   display: lex;
-  background-position: center center;
+  text-align: center;
+  border: 3px solid rgb(16, 16, 17);
+  background: -webkit-linear-gradient(bottom, rgb(205, 137, 78), rgba(199, 175, 150, 0.4));
   background-image: flex-box;
   background: url(https://i.imgur.com/BKiv6jo.png?1)
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
