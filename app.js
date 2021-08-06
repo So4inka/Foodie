@@ -8,13 +8,17 @@ const fetchData = async (country) => {
   removeRecipe()
   try {
     const url = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
-    const mealId = url.data.meals[0].idMeal
-   
-    const meal = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
-    const mealRecipe = meal.data.meals[0]
-    
-    
-    showMealRecipe(mealRecipe)
+    // const mealId = url.data.meals[0].idMeal
+    console.log(url.data.meals)
+    const mealsArr = url.data.meals
+    for (let i = 0; i < 3; i++) {
+      const meal = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealsArr[i].idMeal}`)
+      const mealRecipe = meal.data.meals[0]
+      console.log(mealRecipe)
+      showMealRecipe(mealRecipe)
+      
+    }
+      
   }
   catch (error) {
     console.error(error)
