@@ -28,7 +28,7 @@ Gourmie is a website that allows you to search for country quisine and make your
 
 ## API and Data Sample
 
-[The Meal DB] (https://themealdb.com/)
+[The Meal DB](https://themealdb.com/)
 
 ```json
 {
@@ -47,7 +47,6 @@ Gourmie is a website that allows you to search for country quisine and make your
 
 ## Wireframes
 
-[My Wireframe]
 ![alt text](https://i.imgur.com/xuophMM.png?1 "Wireframe")
 
 #### MVP
@@ -77,7 +76,6 @@ Gourmie is a website that allows you to search for country quisine and make your
 
 ## Priority Matrix
 
-[Priority Matrix]
 ![alt text](https://i.imgur.com/gBMfUSA.png?1 "Priority Matrix")
 
 ## Timeframes
