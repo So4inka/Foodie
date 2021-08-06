@@ -1,6 +1,5 @@
 // Pseudo Code Steps for the Project:
-//Step 1: Fetch Country data using .then() 
-//from the API https://themealdb.com/
+//Step 1: Fetch Country data from the API https://themealdb.com/
 // a) Search by country cuisine ()
 // b) Search for actual recipe instruction, youtube video
 
@@ -8,12 +7,10 @@ const fetchData = async (country) => {
   removeRecipe()
   try {
     const url = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
-    console.log(url.data.meals)
     const mealsArr = url.data.meals
     for (let i = 0; i < 3; i++) {
       const meal = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealsArr[i].idMeal}`)
       const mealRecipe = meal.data.meals[0]
-      console.log(mealRecipe)
       showMealRecipe(mealRecipe)  
     }    
   }
@@ -46,7 +43,6 @@ function showMealRecipe(meals) {
     e.preventDefault()
     const textInput = document.querySelector
       ('#recipe-search')
-    console.log(textInput.value)
     fetchData(textInput.value)
   })
 
@@ -59,7 +55,7 @@ function removeRecipe() {
   }
 }
 
-// Do Steps from 1-6 for SEARCH BY RANDOM "www.themealdb.com/api/json/v1/1/random.php";
+
 
 
   
