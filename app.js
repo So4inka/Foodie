@@ -8,7 +8,7 @@ const fetchData = async (country) => {
   try {
     const url = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
     const mealsArr = url.data.meals
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
       const meal = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealsArr[i].idMeal}`)
       const mealRecipe = meal.data.meals[0]
       showMealRecipe(mealRecipe)  
