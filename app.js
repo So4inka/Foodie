@@ -13,14 +13,13 @@ const fetchData = async (country) => {
     const meal = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     const mealRecipe = meal.data.meals[0]
     
+    
     showMealRecipe(mealRecipe)
   }
   catch (error) {
     console.error(error)
   }
 }
-
-
 
 // Step 2. Create dynamic HTML for SEARCH BY AREA
 // Step 3. Dynamicly search county using HHTNL form with eventHadler 
@@ -36,7 +35,7 @@ function showMealRecipe(meals) {
   <img src="${meals.strMealThumb}">
   <h2>Instructions:</h2>
   <h4>${meals.strInstructions}</h4>  
-  <a href="${meals.strYoutube}">Watch it on Youtube!</a> 
+  <a href="${meals.strYoutube}"> Watch it on Youtube! </a>
   `
     document.querySelector('#recipe-data').insertAdjacentHTML('beforeend', mealElements)
   }
@@ -61,26 +60,10 @@ function removeRecipe() {
 
 // Do Steps from 1-6 for SEARCH BY RANDOM "www.themealdb.com/api/json/v1/1/random.php";
 
-// function fetchRandom(random) {
-//   // write code here
-//     // removeRandom()
-//     const url = `https://www.themealdb.com/api/json/v1/1/${random}.php`
-//     axios.get(url)
-//       .then((res) => {
-//         console.log(res.data.meals[0])
-//         const randomData = res.data.meals[0]
-        
-//         return randomData
-        
-//       })
-//       .catch((error) => {
-//       console.error(error)
-//     })
-//   }
-  // fetchRandom('random')
-// // Steps 2-6
 
-// function showRandomData(data) {
+  // write code here
+    // removeRandom()
+    
   
 // strMeal
 // strMealThumb
@@ -91,39 +74,15 @@ function removeRecipe() {
 // strIngredient:
 // strMeasure: 
 // Step 2. Create dynamic HTML for SEARCH RANDOM 
-//   let randomElements = `
-//   <h1>${data.strMeal}</h1>
-//   <img src="${data.strMealThumb}">
-//   <h2>Instructions:</h2>
-//   <h4>${data.strInstructions}</h4> 
-//   <a href="${data.strYoutube}">Watch it on Youtube!</a>
-//   `
-//   document.querySelector('#random-data').insertAdjacentHTML('beforeend', randomElements)
-// }
+ 
   // console.log(randomElements)
 // Step 4. Dynamicly search county using HTML form with eventHadler
-// const label = document.querySelector('.random-label')
-//  console.log(label)
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault()
-//   const textInput = document.querySelector
-//     ('#random-search')
-//   console.log(textInput.value)
-//   fetchData(textInput.value)
-// })
+
 // Step 5. Remove previous random data
 // write  code here
 // call that function
 
-// function removeRandom() {
-//   const removeElement = document.querySelector('#random-data')
-//   while (removeElement.lastChild) {
-//     removeElement.removeChild(removeElement.lastChild)
-//   }
-// }
 
-
-   
 
 
 

@@ -1,18 +1,32 @@
-header {
-    flex: 0 150px;
+div .header {
+  flex: 0 150px;
+  padding-top: 50px;
+	font-size: 20px;
+	text-align: center;
+  background-color: rgb(15, 157, 79);
 }
-
+h1 {
+  font-size: 2rem;
+  padding: 2rem;
+}
 body {
   text-align: center;
   border: 3px solid rgb(16, 16, 17);
 }
+/* div {
+  background-image: url('https://i.imgur.com/zwlpfg5.png')
+} */
+
+
+
 img {
   display: inline-flex;
-  width: 600px;
-  height: fit-content;
+  width: max-content;
+  height: 350px;
   max-width: 100%;
-  padding: 3px;
+  padding: 5px;
   border: 3px solid rgb(112, 23, 24);
+  
 }
 @media (max-width: 500px) {
   body {
@@ -26,10 +40,6 @@ img {
       font-size: 14px;
     }
   
-    h1 {
-      font-size: 2rem;
-    }
-
 
 body {
   display: flexbox;
