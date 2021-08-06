@@ -1,10 +1,10 @@
 # Project Name
 
-[Placeholder Link Until Deployed ](https://so4inka.github.io/Foodie_Project/)
+Gourmie
 
-## Prep Your Meal!
+## Project Link
 
-[My Gourmie Project] ("")
+[ Click here to view the website ](https://so4inka.github.io/Foodie_Project/)
 
 ```jason
 "meals": [
