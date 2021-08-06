@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer src="app.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
-  <title>Gourmie</title>
-  <div class='header'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-    
-        <h1 class='header'>Welcome to Gourmie</h1>
-        <blockquote>One cannot think well, love well, sleep well if one has not dined well.<br>
+    <script defer src="./app.js" charset="utf-8"></script>
+    <link
+      rel="stylesheet"
+      href="./style.css"
+      type="text/css"
+      media="screen"
+      title="no title"
+      charset="utf-8"
+    />
+    <title>Gourmie</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Welcome to Gourmie</h1>
+      <blockquote>
+        One cannot think well, love well, sleep well if one has not dined
+        well.<br />
         <cite>- unknown</cite>
-      </blockquote>    
-    </div> 
-<img src="https://i.imgur.com/zwlpfg5.png" alt="various food on the table"/>
-</head>
-<body>
-   <div>
-     <form id="recipe-form"> 
-       <input 
-          type="text" 
-          name="country" 
-          placeholder=" Search cuisine type"
-          id="recipe-search"      
-       />
-     <input
-       type="submit"  
-       placeholder="get recipe"
-       id="get-recipe" 
-    /> 
-</form>
-   </div>
-  <div style="margin-top: 10px;"
-    id="recipe-data">
-  </div>
-
-</body>
-
+      </blockquote>
+    </div>
+    <div class="image-container">
+      <img
+        src="https://i.imgur.com/zwlpfg5.png"
+        alt="various food on the table"
+      />
+    </div>
+    <div>
+      <form id="recipe-form">
+        <input
+          type="text"
+          name="country"
+          placeholder=" Choose cuisine type"
+          id="recipe-search"
+        />
+        <input type="submit" placeholder="get recipe" id="get-recipe" />
+      </form>
+    </div>
+    <div style="margin-top: 10px" id="recipe-data"></div>
+  </body>
 </html>

@@ -32,11 +32,11 @@ function showMealRecipe(meals) {
   // idMeal etc...
   
     let mealElements = `
-  <h1>${meals.strMeal}</h1>
-  <img src="${meals.strMealThumb}">
-  <h2>Instructions:</h2>
-  <h4>${meals.strInstructions}</h4>  
-  <a href="${meals.strYoutube}"> Watch it on Youtube! </a>
+  <h1 class="meal-name">${meals.strMeal}</h1>
+  <img class="meal-image" src="${meals.strMealThumb}">
+  <h2 class="meal-instructions">Instructions:</h2>
+  <h4 class="instructions">${meals.strInstructions}</h4>  
+  <a  class="channel" href="${meals.strYoutube}"> Watch it on Youtube! </a>
   `
     document.querySelector('#recipe-data').insertAdjacentHTML('beforeend', mealElements)
   }
