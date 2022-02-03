@@ -20,7 +20,7 @@ const fetchData = async (country) => {
 }
 
 // Step 2. Create dynamic HTML for SEARCH BY AREA
-// Step 3. Dynamicly search county using HHTNL form with eventHadler 
+// Step 3. Dynamicly search county using HTML form with eventHadler 
 // Step 4. Append data
 
 function showMealRecipe(meals) {
