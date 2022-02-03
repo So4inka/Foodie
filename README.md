@@ -4,7 +4,7 @@ Gourmie
 
 ## Project Link
 
-[ Click here to view the website ](https://so4inka.github.io/Foodie_Project/)
+[ Click here to view the website ](https://so4inka.github.io/Foodie/)
 
 ```jason
 "meals": [
